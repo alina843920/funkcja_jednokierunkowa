@@ -28,9 +28,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Password Hasher</h1>
+        <h1>FUNKCJA JEDNOKIERUNKOWA</h1>
         <form>
-          <label htmlFor="input">Enter password:</label>
+          <label htmlFor="input">hasło:</label>
           <input
             type="text"
             id="input"
@@ -38,21 +38,21 @@ const App = () => {
             onChange={(e) => setInput(e.target.value)}
           />
           <button type="button" onClick={handleGenerateHash}>
-            Generate Hash
+            OK
           </button>
         </form>
         {hash && (
           <>
             <p>Hash: {hash}</p>
             <button type="button" onClick={handleBruteForceAttack}>
-              Brute Force Attack
+              Brute Force
             </button>
             <button type="button" onClick={handleDictionaryAttack}>
-              Dictionary Attack
+              Dictionary
             </button>
 
-            {bruteForceResult && <p>Brute Force Result: {bruteForceResult}</p>}
-            {dictionaryResult && <p>Dictionary Result: {dictionaryResult}</p>}
+            {bruteForceResult && <p>Brute Force: {bruteForceResult}</p>}
+            {dictionaryResult && <p>Dictionary: {dictionaryResult}</p>}
           </>
         )}
       </header>
